@@ -64,7 +64,7 @@ const Projects = () => {
                 {/* --- Section Header --- */}
                 <div className="mb-20 space-y-4">
                     <h2 className="text-5xl md:text-6xl font-serif tracking-tight text-white">
-                       My Projects
+                        My Projects
                     </h2>
                     <p className="text-zinc-400 text-lg md:text-xl max-w-2xl font-light">
                         A curated selection of projects where I solved complex problems with clean code and intuitive design.
@@ -86,11 +86,25 @@ const Projects = () => {
                             */}
                             <div className="relative w-full aspect-video overflow-hidden bg-zinc-950">
                                 <div className="absolute inset-0 bg-black/10 z-10 group-hover:bg-transparent transition-colors duration-500"></div>
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-full object-cover object-top transform transition-transform duration-700 group-hover:scale-105"
-                                />
+                                <div className="relative w-full aspect-video overflow-hidden bg-zinc-800"> {/* Added lighter bg for placeholder effect */}
+                                    <div className="absolute inset-0 bg-black/10 z-10 group-hover:bg-transparent transition-colors duration-500"></div>
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        loading="lazy"
+                                        decoding="async"
+                                        // Add width/height if known to prevent layout shift
+                                        width="800"
+                                        height="450"
+                                        className="w-full h-full object-cover object-top transform transition-transform duration-700 group-hover:scale-105"
+                                    // Optional: Add a simple fade-in effect via CSS class if you want extra smoothness
+                                    />
+
+                                    {/* Floating Tech Stack Badge */}
+                                    <div className="absolute bottom-4 left-4 z-20 flex flex-wrap gap-2">
+                                        {/* ... existing badge code ... */}
+                                    </div>
+                                </div>
 
                                 {/* Floating Tech Stack Badge */}
                                 <div className="absolute bottom-4 left-4 z-20 flex flex-wrap gap-2">
