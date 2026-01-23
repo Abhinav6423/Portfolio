@@ -1,9 +1,9 @@
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt, FaExclamationCircle, FaLightbulb, FaLayerGroup } from 'react-icons/fa';
 // Ensure the path to your image is correct
-import avishaft from "../assets/avishaft homepage 2.0.png"
-import preface from "../assets/Preface.png"
-import urlShort from "../assets/url-short.png"
+import avishaft from "../assets/avishaft2.webp"
+import preface from "../assets/Preface2.webp"
+import urlShort from "../assets/url-short 2.webp"
 const Projects = () => {
     const projects = [
         {
