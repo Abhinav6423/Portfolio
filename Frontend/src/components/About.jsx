@@ -7,33 +7,34 @@ const About = () => {
   const skills = [
     {
       id: 1,
-      name: 'MERN Stack',
+      name: 'MERN Stack Engineering',
       description: 'MongoDB, Express, React, Node.js',
       icon: <FaReact className="w-6 h-6" />,
-      level: 'Strong',
+      level: 'Advanced',
     },
     {
       id: 2,
-      name: 'Backend Development',
-      description: 'REST APIs, JWT Auth, Cookies',
+      name: 'Backend Systems',
+      description: 'REST APIs, JWT Auth, Cookies, MVC',
       icon: <FaNodeJs className="w-6 h-6" />,
-      level: 'Good',
+      level: 'Advanced',
     },
     {
       id: 3,
-      name: 'Database Management',
-      description: 'Mongoose ODM & Data Modeling',
+      name: 'Database Architecture',
+      description: 'Mongoose ODM, Data Modeling',
       icon: <SiMongodb className="w-6 h-6" />,
-      level: 'Good',
+      level: 'Strong',
     },
     {
       id: 4,
-      name: 'Modern UI',
+      name: 'Frontend UI Engineering',
       description: 'Tailwind CSS, Responsive Design',
       icon: <SiTailwindcss className="w-6 h-6" />,
       level: 'Strong',
     },
   ];
+
 
   // Animation Variants
   const containerVariants = {
@@ -73,7 +74,12 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-serif tracking-wide">
             About
           </h2>
+          <p className="text-zinc-500 mt-3 text-sm tracking-widest uppercase">
+            Builder • Full-Stack Engineer • Product-Focused
+          </p>
         </motion.div>
+
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 mb-20">
 
@@ -85,10 +91,10 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-2xl md:text-3xl font-light leading-relaxed mb-6 text-zinc-100">
-              I build full-stack web applications that are fast, responsive, and easy to use.
+              I turn ideas into real, production-ready web products.
             </h3>
             <p className="text-zinc-400 text-lg leading-relaxed">
-              I focus on turning ideas into real products using modern web technologies and clean, maintainable code.
+              I’m a full-stack developer focused on building fast, scalable applications with clean architecture and intuitive user experiences — not just demos, but real-world products.
             </p>
           </motion.div>
 
@@ -101,14 +107,17 @@ const About = () => {
             className="text-zinc-400 text-base leading-loose space-y-6"
           >
             <p>
-              I'm Abhinav, a MERN stack developer who enjoys building real-world web
-              applications from scratch. I work with MongoDB, Express, React, and
-              Node.js to create scalable and user-friendly products.
+              I’m Abhinav, a MERN stack developer who builds full-stack web applications
+              from the ground up — from backend APIs to frontend UI and deployment.
             </p>
             <p>
-              I’ve built various fullstack web applications, where I handled authentication,
-              REST APIs, database design, and frontend UI. I care about writing clean
-              code, learning best practices, and improving with every project I build.
+              I’ve shipped multiple projects where I handled authentication, REST APIs,
+              database modeling, and frontend architecture. I care deeply about clean
+              code, scalability, and building systems that actually work in real-world use.
+            </p>
+            <p>
+              I’m constantly improving my craft, learning best practices, and pushing
+              myself to build better, faster, and more maintainable products with every project.
             </p>
           </motion.div>
         </div>

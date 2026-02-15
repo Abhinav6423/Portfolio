@@ -26,7 +26,8 @@ const Footer = () => {
                             <a href="#projects" className="hover:text-white transition-colors">Projects</a>
                             <a href="#services" className="hover:text-white transition-colors">Services</a>
                             <a href="#contact" className="hover:text-white transition-colors">Contact</a>
-                            <a href="#" className="hover:text-white transition-colors">Privacy</a>
+                            <a href="#about" className="hover:text-white transition-colors">About</a>
+
                         </nav>
                     </div>
 
@@ -37,13 +38,15 @@ const Footer = () => {
 
                         {/* Big Headline */}
                         <h2 className="text-4xl md:text-5xl font-serif text-white leading-tight text-left md:text-right">
-                            Let's build your <br />
-                            <span className="italic text-zinc-500">next big thing.</span>
+                            Let’s build something <br />
+                            <span className="italic text-zinc-500">real and impactful.</span>
                         </h2>
+
 
                         {/* CTA Button */}
                         <button className="px-8 py-3 bg-white text-black font-medium text-sm uppercase tracking-widest rounded-full hover:bg-zinc-200 hover:scale-105 transition-all duration-300">
-                            Start your project
+                            Build With Me
+
                         </button>
                     </div>
 
@@ -56,7 +59,7 @@ const Footer = () => {
                     </p>
                     <div className="flex gap-4 mt-4 md:mt-0">
                         {/* Optional Social Links could go here if needed later */}
-                        <span>Designed & Built with React</span>
+                        <span>Designed & Built with React & Tailwind CSS</span>
                     </div>
                 </div>
 

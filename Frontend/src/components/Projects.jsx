@@ -11,43 +11,54 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
-            title: 'Avishaft — Business Website',
-            problem: 'The client needed a modern, responsive website to showcase their services and establish an online presence. Their old site was outdated, slow, and not mobile-friendly.',
-            solution: 'Designed and built a clean, responsive business website using React and Tailwind CSS. Optimized layout for mobile devices and improved page load performance for better user experience.',
+            title: 'Avishaft — Learning OS for Students',
+            problem:
+                'Students struggle to build consistent learning habits and retain what they study. Traditional note-taking apps are passive — they don’t motivate users, track progress, or provide feedback to improve learning outcomes.',
+            solution:
+                'Built a full-stack learning platform that combines structured note-taking, habit tracking, and AI-assisted feedback into a single system. Users can log daily learning entries, track streaks, reflect on progress, and receive personalized insights to stay consistent and improve long-term retention.',
             image: avishaft,
-            technologies: ['React', 'Tailwind CSS', 'JavaScript'],
+            technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'AI APIs'],
             githubLink: 'https://github.com/Abhinav6423/Avi-Shaft-',
         },
+
         {
             id: 2,
-            title: 'Preface — Short Story Platform',
-            problem: 'Writers and readers lacked a simple platform to publish and discover short stories in one place. Existing platforms were cluttered and not focused on short-form storytelling.',
-            solution: 'Built a full-stack MERN application where users can publish, read, and manage short stories. Implemented authentication, user profiles, and a clean reading interface optimized for all devices.',
+            title: 'Preface — Creator & Reader Platform for Short Fiction',
+            problem:
+                'Writers lack a simple platform to publish stories and build an audience, while readers lack a clean space to discover, save, and organize short-form fiction without noise or algorithmic clutter.',
+            solution:
+                'Developed a full-stack storytelling platform where writers can publish content and manage their profiles, while readers can like stories, bookmark favorites, and create personal Goodreads-style collections. The system is designed to support a growing story universe with scalable content management and a distraction-free reading experience.',
             image: preface,
             technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
             liveLink: 'https://preface.vercel.app/',
             githubLink: 'https://github.com/Abhinav6423/Story-Verse',
         },
+
         {
             id: 3,
             title: 'URL Shortener — Link Analytics Tool',
-            problem: 'Users needed a simple way to shorten long URLs and track how their links were performing. Most free tools did not provide meaningful analytics or QR code support.',
-            solution: 'Developed a URL shortener with analytics features such as total clicks, popular links, and per-link click tracking. Added automatic QR code generation for every shortened link.',
+            problem:
+                'Users needed a simple way to shorten long URLs and track how their links were performing. Most free tools lacked meaningful analytics and QR code support.',
+            solution:
+                'Developed a URL shortener with built-in analytics, including total clicks, per-link tracking, and popular link insights. Added automatic QR code generation for every shortened link.',
             image: urlShort,
-            technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Chart.js'],
-            githubLink: 'https://github.com/yourusername/url-shortener',
+            technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
+            githubLink: 'https://github.com/Abhinav6423/url-shortener',
         },
         {
             id: 4,
             title: 'OmniAnalytics Dashboard',
-            problem: 'Marketing teams were drowning in CSV exports from Twitter, LinkedIn, and Instagram to create monthly reports.',
-            solution: 'Created a unified dashboard that visualizes cross-platform growth metrics in one interactive graph, saving the team approx. 10 hours per week.',
+            problem:
+                'Marketing teams were manually exporting CSV files from multiple platforms just to create monthly growth reports, wasting time and effort.',
+            solution:
+                'Built a unified analytics dashboard that visualizes cross-platform growth metrics in a single interactive view, reducing reporting time by approximately 10 hours per week.',
             image: 'https://source.unsplash.com/random/900x600?data,charts',
             technologies: ['React', 'D3.js', 'Firebase Functions', 'OAuth 2.0'],
             liveLink: '#',
             githubLink: '#',
         },
     ];
+
 
     return (
         <section id="projects" className="w-full bg-neutral-950 py-24 px-4 md:px-10 text-white">
@@ -65,8 +76,9 @@ const Projects = () => {
                         My Projects
                     </h2>
                     <p className="text-zinc-400 text-lg md:text-xl max-w-2xl font-light">
-                        A curated selection of projects where I solved complex problems with clean code and intuitive design.
+                        A selection of real-world projects where I designed, built, and shipped full-stack products to solve meaningful problems.
                     </p>
+
                     <div className="h-1 w-24 bg-zinc-800 mt-6"></div>
                 </motion.div>
 
@@ -162,6 +174,10 @@ const Projects = () => {
                                         {project.solution}
                                     </p>
                                 </div>
+                                <p className="text-zinc-500 text-xs uppercase tracking-widest mt-3">
+                                    Role: Full-Stack Developer • Architecture • UI • Backend
+                                </p>
+
                             </div>
                         </motion.div>
                     ))}

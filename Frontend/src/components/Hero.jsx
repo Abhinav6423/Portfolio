@@ -68,22 +68,26 @@ const Hero = () => {
 
                 {/* Subtitle */}
                 <motion.h2 variants={itemVariants} className="text-zinc-400 tracking-[0.3em] text-xs md:text-sm uppercase mb-6 font-light">
-                    Full Stack Engineer
+                    Turning Ideas Into Real Products
+
                 </motion.h2>
 
                 {/* Name */}
                 <motion.h1 variants={itemVariants} className="text-white text-5xl md:text-8xl font-serif tracking-tight mb-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">
-                    I'm Abhinav Pandey,
+                    Hi, I’m Abhinav Pandey
+
                 </motion.h1>
 
                 {/* Title with Gradient */}
                 <motion.h1 variants={itemVariants} className="text-transparent bg-clip-text bg-gradient-to-b from-zinc-200 to-zinc-500 text-5xl md:text-8xl font-serif italic mb-8 pb-2">
-                    WEB DEVELOPER.
+                    Full-Stack Developer building fast, scalable digital products.
+                    .
                 </motion.h1>
 
                 {/* Description */}
                 <motion.p variants={itemVariants} className="text-zinc-400 max-w-lg mx-auto mb-10 text-lg font-light leading-relaxed">
-                    Crafting scalable MERN stack applications with clean code and minimal design.
+                    I design and develop high-performance web applications with clean architecture, strong backend systems, and modern user experiences.
+                    Focused on real-world problem solving, speed, and production-grade execution.
                 </motion.p>
 
                 {/* Buttons */}
@@ -93,7 +97,8 @@ const Hero = () => {
                         whileTap={{ scale: 0.95 }}
                         className="px-8 py-3 bg-white text-black font-medium text-sm uppercase tracking-widest hover:bg-zinc-200 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-300 rounded-sm"
                     >
-                        Get in touch
+                        Work With Me
+
                     </motion.button>
 
                     <motion.button
@@ -101,7 +106,8 @@ const Hero = () => {
                         whileTap={{ scale: 0.95 }}
                         className="px-8 py-3 border border-zinc-700 text-white font-medium text-sm uppercase tracking-widest hover:border-white hover:bg-white/5 transition-all duration-300 rounded-sm"
                     >
-                        See my projects
+                        View Real Projects
+
                     </motion.button>
                 </motion.div>
             </motion.div>

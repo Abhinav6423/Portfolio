@@ -8,29 +8,35 @@ const Services = () => {
     const services = [
         {
             id: 1,
-            title: 'Frontend Development',
-            description: 'Building responsive, interactive, and pixel-perfect user interfaces using React.js and Tailwind CSS. I ensure a seamless and engaging experience across all devices.',
+            title: 'UI & Frontend Development',
+            description:
+                'Modern, responsive user interfaces built with React and Tailwind. Designed for clarity, performance, and great user experience.',
             icon: <FaReact className="w-7 h-7" />,
         },
         {
             id: 2,
-            title: 'Backend Development',
-            description: 'Engineering robust and secure RESTful APIs with Node.js and Express.js. I handle server-side logic, authentication using JWT, and efficient data flow.',
+            title: 'Backend API Development',
+            description:
+                'Secure REST APIs using Node.js and Express. Authentication, business logic, and scalable backend architecture.',
             icon: <FaNodeJs className="w-7 h-7" />,
         },
         {
             id: 3,
-            title: 'Database Management',
-            description: 'Designing and managing scalable, high-performance NoSQL databases with MongoDB and Mongoose for reliable data storage and quick retrieval.',
+            title: 'Database Design',
+            description:
+                'MongoDB schema design, data modeling, and performance optimization using Mongoose.',
             icon: <FaDatabase className="w-7 h-7" />,
         },
         {
             id: 4,
-            title: 'Version Control & Workflow',
-            description: 'Maintaining clean code history and collaboration using Git and GitHub. I use tools like Postman for rigorous API testing to ensure quality deliverables.',
+            title: 'MVP & Full-Stack Product Builds',
+            description:
+                'End-to-end MVP development — from idea to launch. Clean code, fast delivery, and scalable foundations.',
             icon: <FaGitAlt className="w-7 h-7" />,
         },
     ];
+
+
 
     // Animation Variants
     const containerVariants = {
@@ -67,7 +73,13 @@ const Services = () => {
                     <h2 className="text-4xl md:text-5xl font-serif tracking-wide">
                         Services
                     </h2>
+                    <p className="text-zinc-500 mt-3 text-sm tracking-widest uppercase">
+                        What I Can Build For You
+                    </p>
                 </motion.div>
+
+
+
 
                 {/* --- Services Grid (Staggered) --- */}
                 <motion.div
