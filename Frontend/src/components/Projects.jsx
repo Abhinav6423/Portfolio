@@ -1,8 +1,8 @@
 import React from 'react';
-import { FaGithub, FaExternalLinkAlt, FaExclamationCircle, FaLightbulb } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaLayerGroup, FaCode } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
-// Optimized Images
+// Images (Ensure these paths are correct in your project)
 import avishaft from "../assets/avishaft 2.webp"
 import preface from "../assets/Preface2.webp"
 import urlShort from "../assets/url-short 2.webp"
@@ -11,174 +11,174 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
-            title: 'Avishaft — Learning OS for Students',
-            problem:
-                'Students struggle to build consistent learning habits and retain what they study. Traditional note-taking apps are passive — they don’t motivate users, track progress, or provide feedback to improve learning outcomes.',
-            solution:
-                'Built a full-stack learning platform that combines structured note-taking, habit tracking, and AI-assisted feedback into a single system. Users can log daily learning entries, track streaks, reflect on progress, and receive personalized insights to stay consistent and improve long-term retention.',
+            title: 'Avishaft',
+            subtitle: 'Learning Operation System',
+            problem: 'Students fail to retain information due to passive note-taking and lack of feedback loops.',
+            solution: 'A full-stack platform combining active recall, habit tracking, and AI-feedback to boost retention.',
             image: avishaft,
-            technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'AI APIs'],
+            technologies: ['React', 'Node.js', 'MongoDB', 'AI Integration'],
             githubLink: 'https://github.com/Abhinav6423/Avi-Shaft-',
         },
-
         {
             id: 2,
-            title: 'Preface — Creator & Reader Platform for Short Fiction',
-            problem:
-                'Writers lack a simple platform to publish stories and build an audience, while readers lack a clean space to discover, save, and organize short-form fiction without noise or algorithmic clutter.',
-            solution:
-                'Developed a full-stack storytelling platform where writers can publish content and manage their profiles, while readers can like stories, bookmark favorites, and create personal Goodreads-style collections. The system is designed to support a growing story universe with scalable content management and a distraction-free reading experience.',
+            title: 'Preface',
+            subtitle: 'Short Fiction Publishing Platform',
+            problem: 'Writers lack a distraction-free space to build audiences for short-form narrative fiction.',
+            solution: 'A dedicated ecosystem for storytelling with "Goodreads-style" collections and writer profiles.',
             image: preface,
-            technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
+            technologies: ['React', 'Tailwind', 'Express', 'JWT Auth'],
             liveLink: 'https://preface.vercel.app/',
             githubLink: 'https://github.com/Abhinav6423/Story-Verse',
         },
-
         {
             id: 3,
-            title: 'URL Shortener — Link Analytics Tool',
-            problem:
-                'Users needed a simple way to shorten long URLs and track how their links were performing. Most free tools lacked meaningful analytics and QR code support.',
-            solution:
-                'Developed a URL shortener with built-in analytics, including total clicks, per-link tracking, and popular link insights. Added automatic QR code generation for every shortened link.',
+            title: 'URL Shortener',
+            subtitle: 'Link Analytics & Management',
+            problem: 'Basic link shorteners lack deep analytics and QR code generation for free users.',
+            solution: 'An analytics-first tool providing click heatmaps, location tracking, and instant QR codes.',
             image: urlShort,
-            technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
+            technologies: ['Node.js', 'React', 'Recharts', 'MongoDB'],
             githubLink: 'https://github.com/Abhinav6423/url-shortener',
         },
         {
             id: 4,
-            title: 'OmniAnalytics Dashboard',
-            problem:
-                'Marketing teams were manually exporting CSV files from multiple platforms just to create monthly growth reports, wasting time and effort.',
-            solution:
-                'Built a unified analytics dashboard that visualizes cross-platform growth metrics in a single interactive view, reducing reporting time by approximately 10 hours per week.',
-            image: 'https://source.unsplash.com/random/900x600?data,charts',
-            technologies: ['React', 'D3.js', 'Firebase Functions', 'OAuth 2.0'],
+            title: 'OmniAnalytics',
+            subtitle: 'Marketing Dashboard',
+            problem: 'Marketing teams waste 10+ hours/week manually merging CSVs for reports.',
+            solution: 'Unified dashboard visualizing cross-platform growth metrics in real-time.',
+            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop', // High quality placeholder
+            technologies: ['D3.js', 'Firebase', 'React', 'OAuth 2.0'],
             liveLink: '#',
             githubLink: '#',
         },
     ];
 
+    // --- ANIMATION VARIANTS ---
+    const fadeInUp = {
+        hidden: { opacity: 0, y: 60 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, ease: "easeOut" }
+        }
+    };
 
     return (
-        <section id="projects" className="w-full bg-neutral-950 py-24 px-4 md:px-10 text-white">
-            <div className="max-w-7xl mx-auto">
+        <section id="projects" className="relative w-full bg-[#050505] py-32 px-6 overflow-hidden">
 
-                {/* --- Section Header (Animated) --- */}
+            {/* --- BACKGROUND ELEMENTS --- */}
+            {/* Center/Bottom Glow - Cyan/Blue mix to distinguish from other sections */}
+            <div className="absolute bottom-0 left-1/2 w-[800px] h-[600px] bg-cyan-900/10 blur-[120px] rounded-full pointer-events-none -translate-x-1/2 translate-y-1/4"></div>
+
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+
+            <div className="max-w-7xl mx-auto relative z-10">
+
+                {/* --- HEADER --- */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="mb-20 space-y-4"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    variants={fadeInUp}
+                    className="mb-24"
                 >
-                    <h2 className="text-5xl md:text-6xl font-serif tracking-tight text-white">
-                        My Projects
+                    <div className="flex items-center gap-4 mb-6">
+                        <span className="w-12 h-px bg-zinc-700"></span>
+                        <span className="text-zinc-400 text-xs uppercase tracking-[0.2em]">Selected Work</span>
+                    </div>
+                    <h2 className="text-4xl md:text-6xl font-serif text-white mb-6">
+                        Digital Products. <br />
+                        <span className="text-zinc-500 italic">Crafted with Precision.</span>
                     </h2>
-                    <p className="text-zinc-400 text-lg md:text-xl max-w-2xl font-light">
-                        A selection of real-world projects where I designed, built, and shipped full-stack products to solve meaningful problems.
-                    </p>
-
-                    <div className="h-1 w-24 bg-zinc-800 mt-6"></div>
                 </motion.div>
 
-                {/* --- The Banger Grid --- */}
+                {/* --- PROJECTS GRID --- */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
                     {projects.map((project, index) => (
                         <motion.div
                             key={project.id}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }} // Triggers when 50px of item is visible
-                            transition={{ duration: 0.6, delay: index * 0.2 }} // Staggered delay (0s, 0.2s, 0.4s...)
-                            whileHover={{ y: -10 }} // Physical lift effect on hover
-                            className="group flex flex-col bg-zinc-900/30 border border-white/5 rounded-[2rem] overflow-hidden hover:bg-zinc-900/50 hover:border-white/10 transition-colors duration-500 shadow-2xl"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }} // Trigger when 20% visible
+                            transition={{ delay: index * 0.1 }}
+                            variants={fadeInUp}
+                            className="group flex flex-col gap-6"
                         >
+                            {/* 1. Image Card */}
+                            <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-white/5 bg-zinc-900/50">
 
-                            {/* 1. Image Area (Optimized) */}
-                            <div className="relative w-full aspect-video overflow-hidden bg-zinc-950">
-                                <div className="absolute inset-0 bg-black/10 z-10 group-hover:bg-transparent transition-colors duration-500"></div>
-                                <div className="relative w-full h-full bg-zinc-800">
-                                    <div className="absolute inset-0 bg-black/10 z-10 group-hover:bg-transparent transition-colors duration-500"></div>
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        loading="lazy"
-                                        decoding="async"
-                                        width="800"
-                                        height="450"
-                                        className="w-full h-full object-cover object-top transform transition-transform duration-700 group-hover:scale-105"
-                                    />
+                                {/* Overlay Gradient (Darkens image slightly until hover) */}
+                                <div className="absolute inset-0 bg-zinc-950/20 group-hover:bg-transparent transition-all duration-500 z-10"></div>
 
-                                    {/* Floating Tech Stack Badge */}
-                                    <div className="absolute bottom-4 left-4 z-20 flex flex-wrap gap-2">
-                                        {project.technologies.slice(0, 3).map((tech, i) => (
-                                            <span key={i} className="bg-black/80 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-full border border-white/10">
-                                                {tech}
-                                            </span>
-                                        ))}
-                                    </div>
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105 filter grayscale-[20%] group-hover:grayscale-0"
+                                />
+
+                                {/* --- FIX APPLIED HERE --- 
+                                    1. opacity-100 translate-y-0: Visible by default (Mobile)
+                                    2. md:opacity-0 md:translate-y-4: Hidden by default on Desktop
+                                    3. md:group-hover:... : Only animate on hover for Desktop
+                                */}
+                                <div className="absolute bottom-4 right-4 z-20 flex gap-2 transition-all duration-300 opacity-100 translate-y-0 md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0">
+                                    {project.githubLink && (
+                                        <a href={project.githubLink} target="_blank" rel="noreferrer" className="p-3 bg-white text-black rounded-full hover:bg-zinc-200 transition-colors shadow-lg">
+                                            <FaGithub className="w-4 h-4" />
+                                        </a>
+                                    )}
+                                    {project.liveLink && (
+                                        <a href={project.liveLink} target="_blank" rel="noreferrer" className="p-3 bg-white text-black rounded-full hover:bg-zinc-200 transition-colors shadow-lg">
+                                            <FaExternalLinkAlt className="w-4 h-4" />
+                                        </a>
+                                    )}
                                 </div>
                             </div>
 
-                            {/* 2. Content Area */}
-                            <div className="flex flex-col flex-grow p-8 md:p-10 space-y-8">
+                            {/* 2. Project Details */}
+                            <div className="space-y-4 px-2">
+                                <div className="flex justify-between items-baseline">
+                                    <div>
+                                        <h3 className="text-3xl font-serif text-zinc-100 group-hover:text-white transition-colors">
+                                            {project.title}
+                                        </h3>
+                                        <p className="text-sm text-cyan-500 font-mono mt-1">
+                                            {project.subtitle}
+                                        </p>
+                                    </div>
+                                    <span className="text-xs font-mono text-zinc-600">0{project.id}</span>
+                                </div>
 
-                                {/* Title & Icons */}
-                                <div className="flex justify-between items-start">
-                                    <h3 className="text-3xl font-serif text-white group-hover:text-cyan-100 transition-colors">
-                                        {project.title}
-                                    </h3>
-                                    <div className="flex gap-3">
-                                        {project.githubLink && (
-                                            <a
-                                                href={project.githubLink}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="p-2 bg-zinc-800 rounded-full hover:bg-white hover:text-black transition-all"
-                                            >
-                                                <FaGithub className="w-5 h-5" />
-                                            </a>
-                                        )}
-                                        {project.liveLink && (
-                                            <a
-                                                href={project.liveLink}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="p-2 bg-zinc-800 rounded-full hover:bg-white hover:text-black transition-all"
-                                            >
-                                                <FaExternalLinkAlt className="w-5 h-5" />
-                                            </a>
-                                        )}
+                                {/* Problem / Solution Mini-Grid */}
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-4 border-t border-zinc-800/50 border-b">
+                                    <div className="space-y-2">
+                                        <h4 className="text-xs uppercase tracking-widest text-zinc-500 flex items-center gap-2">
+                                            <FaLayerGroup className="text-zinc-600" /> Challenge
+                                        </h4>
+                                        <p className="text-sm text-zinc-400 leading-relaxed font-light">
+                                            {project.problem}
+                                        </p>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <h4 className="text-xs uppercase tracking-widest text-zinc-500 flex items-center gap-2">
+                                            <FaCode className="text-zinc-600" /> Solution
+                                        </h4>
+                                        <p className="text-sm text-zinc-400 leading-relaxed font-light">
+                                            {project.solution}
+                                        </p>
                                     </div>
                                 </div>
 
-                                {/* Problem Block */}
-                                <div className="relative pl-6 border-l-2 border-red-500/50">
-                                    <div className="absolute -left-[9px] top-0 bg-neutral-950 text-red-400">
-                                        <FaExclamationCircle />
-                                    </div>
-                                    <h4 className="text-sm font-bold text-red-400 uppercase tracking-widest mb-2">The Problem</h4>
-                                    <p className="text-zinc-400 leading-relaxed text-sm md:text-base">
-                                        {project.problem}
-                                    </p>
+                                {/* Tech Stack */}
+                                <div className="flex flex-wrap gap-2 pt-2">
+                                    {project.technologies.map((tech, i) => (
+                                        <span key={i} className="px-3 py-1 bg-zinc-900 border border-zinc-800 text-zinc-400 text-[10px] uppercase tracking-wider rounded-sm">
+                                            {tech}
+                                        </span>
+                                    ))}
                                 </div>
-
-                                {/* Solution Block */}
-                                <div className="relative pl-6 border-l-2 border-emerald-500/50">
-                                    <div className="absolute -left-[9px] top-0 bg-neutral-950 text-emerald-400">
-                                        <FaLightbulb />
-                                    </div>
-                                    <h4 className="text-sm font-bold text-emerald-400 uppercase tracking-widest mb-2">The Solution</h4>
-                                    <p className="text-zinc-300 leading-relaxed text-sm md:text-base font-light">
-                                        {project.solution}
-                                    </p>
-                                </div>
-                                <p className="text-zinc-500 text-xs uppercase tracking-widest mt-3">
-                                    Role: Full-Stack Developer • Architecture • UI • Backend
-                                </p>
-
                             </div>
+
                         </motion.div>
                     ))}
                 </div>
