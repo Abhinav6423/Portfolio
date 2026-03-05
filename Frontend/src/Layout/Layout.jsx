@@ -6,6 +6,7 @@ import Services from '../components/Services';
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
 import Contact from '../components/Contact';
+
 const Layout = () => {
   return (
     // 1. w-full & min-h-screen: Ensures the layout covers the whole viewport
